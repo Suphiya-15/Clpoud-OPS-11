@@ -1,0 +1,12 @@
+                        Azure Active Directory / Azure Entra ID
+                                         --------------->IAM in AWS
+
+--> Azure AD is microsofts cloud based Identity and Access Management service.
+--> Azure AD is now called Microsoft Entra ID
+
+Azure Entra ID --> Azure subscription-1--> hospital
+                  ----> resource group
+                        -----> resources
+               --> Azure subscription-2---> school
+                   ----> resorce group
+                        ----> resoyrc es

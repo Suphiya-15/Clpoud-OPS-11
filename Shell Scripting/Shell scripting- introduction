@@ -1,0 +1,302 @@
+
+                **Shell Scipting**
+
+*what is shell??
+*terminal vs shell vs console
+
+echo $SHELL
+    or 
+echo $0 
+----> display current shell 
+
+*types of shells:
+1. sh : (bourn shell)
+2. csh : (c shell)
+3. ksh: (korn shell)
+4. zsh: (z shell)
+5. fish : 
+6. bash : 
+
+*Shell scripting:
+--> shell scripting is simply a text file that consist set of commands that execute sequentially.
+--> usually wriiten with .sh extension.
+
+
+#!/bin/bash -----> Shebang line
+# = sharp and 
+! = bang
+
+what is shebang line?
+--> shebang refers to #!
+-- in musical notation # called sharp and ! called bang
+-- it is used to instruct the OS to use bash as a command interpreter.
+-- shebang line specifing the interpreter.
+
+*how to execute script:
+1. ./<script_name>
+eg: ./1.sh
+--> if you are in the same directory as the script use relative path
+
+2. /path/<script_name>
+eg: /etc/1.sh
+--> if you are in different directory, use absolute path
+
+3. bash <script_name>
+--> you are explicitly tell the shell to execute the script using spsecific interpreter. even if it does not have execute permission or a shebang line it will execute your code.
+
+variable: container to store data
+eg:
+a = 10
+name = "seema"
+pi = 25.25
+
+*you can use different commands in shell scripting like date,pwd as a variable.
+*use command substitution method to execute linux commands and use its output in 
+another command or store it in a variable.
+syntax:
+      $(command)
+eg: 
+     current_dir = $(pwd)
+
+name = seema
+echo "$name"
+
+> and >>
+
+> = this operator redirects the output of command to a file, creating a file if it 
+    does not exist or overwritting its contents if it does.
+
+>> = this operator is used to append the new contents to the end of file without deleting existing contents.
+     the file is created if it does not exist.
+
+
+heredoc = here document
+-it allows you to provide multiple lines of input directly in your shell script 
+without calling echo repeatedly.
+syntax:
+command <<DELIMETER
+line1
+line2
+line3
+DELIMETER
+
+EOF = indicates a here document
+-EOF is just a label that tells shell start taking input until you see this 
+word again
+-everything between two EOF goes into file 
+
+eg:
+cat <<EOF >file.text
+this is first line
+this is second line
+this is third line
+EOF
+
+**Text Processing Tools**
+1. grep
+2. awk
+3. sed
+
+1. grep: (Global Regular Expression Print)
+--> grep searches for a word or pattern inside one or more file
+syntax: 
+grep "pattern" <file_name>
+
+2. awk : pattern scanning and Processing
+--> awk used for analyzing and reporting text, especially coloumns in structured
+text like csv or logs.
+syntax:
+awk '{action}' <file_name>
+
+3. sed: Stream EDitor
+--> sed is used to edit text in a stream or file like find, replace and delete lines
+syntax:
+sed 'command' <file_name>
+eg:
+sed 's/WARNING/ERROR/g' demo.log
+
+**Control Structure**
+1. Conditional Statement
+2. loop
+
+1. Conditional Statement:
+--> if-else statement
+syntax:
+if [ condition ] 
+then
+       #command to execute if condition is true
+       else
+       #command to execute if condition is false
+fi
+
+common condition and operation:
+
+1. Number comparison operator
+
+operator  meaning
+-eq :    equal to
+-ne :    not equal to
+-gt :    greater than
+-lt :    less than
+-ge :    greater than equal to
+-le :    less than equal to
+
+2. String comaprision operators
+
+operator    meaning
+=  :       equal to
+!= :       not equal to
+-z :       string is empty
+-n :       string is not empty
+
+3. file operators
+
+operator     meaning
+-e  :      file or dir exists
+-f  :      regular file
+-d  :      directory exist
+-r  :      file is readable
+-w  :      file is writable
+-x  :      file is executable
+
+$? :
+--> it is a special variable that store the exit status of the last
+command executed.
+-->0 means the command is executed successfully.
+-->non-zero means the command failed or returned a specific error.
+
+80 --> A 
+---> B
+
+if [$marks -ge 80]
+    A
+elif [$marks -ge 70]
+    B
+elif [$marks -ge 50]
+c
+else
+fail
+
+2. loop:
+--> to execute a block of commands repeatedly until a specified condition is met.
+
+-types of loops:
+1. for loop:
+--> used when the number of iteration is known.
+syntax:
+
+for variable in list
+do
+      #commands
+done
+eg:
+for i in 1 2 3 4 5
+
+for j in seema atul amit 
+
+for p in {1..30}
+
+for data in file-name
+
+--usecases as a devops engg:
+1. running the same commands on multiple servers.
+2. checking status of multiple services.
+3. backing up multiple files.
+4. pulling or updating docker images
+5. automating repetitive linux admin tasks
+
+
+2. while loop:
+--> used when the number of iteration is unknown
+syntax:
+while [ condition ]
+do 
+      commands
+done
+--> runs while the condition is true.
+--> usecases as a devops engg:
+1. waiting a service to start
+2. ping servers
+3. constant monitoring
+4. monitoring cpu, memory continuously
+5. waiting for server or application to become reachable
+
+
+
+3. until loop 
+--> runs while the condition is false.
+
+**Function** :
+-->A function is a block of code/commands that performs a specific task.
+--> insted of writing same code multiple time write it once inside a function
+and call it whenever needed.
+
+syntax:
+function_name()
+{ 
+     #commands
+}
+
+function function_name 
+{
+    #commands
+}
+
+call the function by writing its name:
+
+function_name
+
+--> $((..)) is used to perform arithmatic operation in bash
+
+
+
+debugging:
+
+1. set -x
+2. set -e
+
+set -ex
+
+**Select and case statements**
+--> select and case statement used to create intercative menus scripts in shell
+scripting
+--> case statement is used when you want to compare one variable with other
+possible values.
+
+sytnax:
+case variable in
+     pattern1)
+        commands
+        ;;
+     pattern2)
+        commands
+        ;;
+     pattern3)
+        commands
+        ;;
+        *)
+        commands
+        ;;
+esac
+
+here,
+case = starts the vase statement
+variable = value to check
+pattern) = possible values
+;; = ends that block
+*) = default case
+esac = ends the case statement(case spelled backwords)
+
+--select statement:
+--> used to create menu driven program
+--> insted of asking the user to type an option, 
+it displays numbered menu and lets the user choose by entring the 
+corresponding number.
+syntax:
+select variable in option1 option2 option3
+do
+   command
+   break
+done 
+
+

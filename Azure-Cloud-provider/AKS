@@ -1,0 +1,18 @@
+                                        AKS
+                                Azure Kubernetes Service
+                                         -----------> EKS in AWS
+
+--> AKS is microsoftsmanaged Kubernetes service.
+--> it makes it easy to deploy, manage and scale containeried applications without meeding to install
+and maintain kubernetes control plane infrastructure yourself. 
+
+                                     
+                                Azure Container Registry
+                                        --------------> ECR in AWS
+
+--> ACR is a managed private container image registry provided by Microsoft Azure.
+--> it is like a docker hub but your org can have its own private registry inside azure.
+
+**ACI** :
+--> Azure Container Instance is a service that allows you to run a container directly in 
+azure without managing VMs or Clusters.

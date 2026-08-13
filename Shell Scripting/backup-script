@@ -1,0 +1,16 @@
+#!/bin/bash
+
+backup_dir="backups"
+source_dir="/mnt/demo"
+timestamp=$(date +"%y-%m-%d_%H-%M-%S")
+backup_file=$backup_dir/backup_$timestamp.tar.gz
+
+mkdir -p $backup_dir
+tar -czf $backup_file $source_dir
+
+if [ $? -eq 0 ]
+then
+    echo "Backup Created Successfully: $backup_file" >> /var/log/backup.log 
+    else
+    echo "Backup Failed for $source_dir" >>/var/log/backup.log  
+fi                              

@@ -1,0 +1,14 @@
+                                 Backup Vault
+
+--> A backup vault stores backup copies so you can restore your data whenever required.
+
+**Why do we need a Backup Vault?**
+--> Suppose you have an Azure VM running an application. If the VM is accidentally deleted, corrupted, or infected by ransomware, you may lose your data. if something goes wrong, you can use the recovery point to restore the VM or data.
+
+**What is stored in the vault?**
+--> The vault can contain backup-related information such as:
+
+1. Recovery points — saved versions of your protected data.
+2. Backup policies — define when and how frequently backups occur.
+3. Backup items — resources that are being protected.
+4. Backup configuration and management information.

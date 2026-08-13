@@ -1,0 +1,53 @@
+select statement script:
+
+#!/bin/bash
+
+#echo "Enter action (start/stop/status):"
+#read action
+#echo "Enter action:"
+
+PS3="Choose Action:"
+select action in start stop status exit
+do
+        case $action in
+                start)
+                        systemctl start nginx
+                        echo "Nginx started"
+                        ;;
+                stop) 
+                        systemctl stop nginx
+                        echo "Nginx Stopped"
+                        ;;
+                status)
+                        systemctl status nginx
+                        echo "Nginx Status"
+                        ;;
+                exit)
+                      break
+                      ;;
+                *)
+                        echo "Invalid Input"
+                        ;;
+        esac
+done
+
+case statement script:
+#!/bin/bash
+
+echo "Enter your favourite cloud: AWS Azure GCP"
+read cloud
+
+case $cloud in
+        AWS)
+        echo "You selected AWS"
+        ;;
+        Azure)
+        echo "You selected Azure"
+        ;;
+        GCP)
+        echo "You selected GCP"
+        ;;
+        *)
+        echo "Invalid Input"
+        ;;
+esac

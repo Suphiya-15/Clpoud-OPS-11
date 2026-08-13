@@ -1,0 +1,63 @@
+                                      Storage Acccount
+                                           ---------->Storage services in AWS
+
+--> AWS has seperate storage services azure groups them under one storage Acccount
+        
+          AWS                                       Azure
+          S3                                       Blob Storage
+          EFS                                      Azure file 
+          SQS                                      Azure queue
+          Dynamodb                                 Azure table
+
+          1. Blob Storage
+          -->Blob storage in Azue is object storage service.
+          --> it is designed to store unstructured data such as images, log files and other documentation
+
+**Differences:
+    1. Required storage account
+    2. files are stored in Containers
+    3. max blob size : 190TB
+
+
+** Types of Blobs:
+--> Azure Blob Storage supports three main types of blobs:
+1. Block Blob
+-->Used for storing normal files.
+eg:Images,Videos,Text files etc
+--> Block Blob is the most commonly used type.
+
+2. Append Blob
+--> Used when data is continuously added to the end of a file.
+eg:Application Logs
+--> New log entries can continuously be appended.
+
+**Access Tiers:
+Azure Blob Storage provides different access tiers based on how frequently the data is accessed.
+1. Hot Tier
+--> Used for data accessed frequently.
+--> It has higher storage cost but lower access cost.
+
+2. Cool Tier
+--> Used for data accessed less frequently.
+--> It has lower storage cost but higher access cost compared to the Hot tier.
+
+3. Cold Tier
+--> Used for data that is rarely accessed but may be needed occasionally.
+
+4. Archive Tier
+--> Used for data that is almost never accessed
+
+
+**Reduandancy:
+--> Redundancy means creating extra copies of your data so that your data remains available even if hardware or infrastructure fails.
+-->Azure Storage redundancy is mainly divided into:
+1. LRS : Locally Redundant Storage
+--> LRS creates 3 copies of your data within a single physical location in one Azure region.
+2. ZRS : Zone-Redundant Storage
+--> ZRS stores multiple copies of your data across different Availability Zones within the same Azure region.
+3. GRS : Geo-Redundant Storage
+--> GRS replicates your data to a secondary Azure region.
+4. GZRS — Geo-Zone-Redundant Storage
+--> GZRS combines:
+-ZRS in the primary region
+-GRS to a secondary region

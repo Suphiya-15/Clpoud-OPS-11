@@ -1,0 +1,17 @@
+                                      Vnet
+                                Virtual Network
+                                       ------------> VPC in AWS
+
+      AWS                                                       Azure                                
+1. AWS transit gateway:                                   Azure Virtual WAN
+-->act as a central router to connect multiple VPC     
+and on premises nrtworks.
+
+
+1. AWS Direct Connect                                     ExpressRoute
+-->private, dedicated connection between on premises
+and Azure
+
+2. AWS site to site VPN                                    VPN gateway
+-->AWS service that connects on premises network
+to AWS over public internet securely

@@ -1,0 +1,54 @@
+
+top players of cloud:
+1. AWS: 2006 : 31 - 33% : +200 services 
+2. Azure: 2010: 21 - 23%
+3. GCP: 2011 : 10 - 13 %
+
+Region      AZ      Cloud Provider
+ 39         123        AWS
+ 60        +100       Azure
+40-42      +100        GCP
+
+Central India : Pune --> AZ
+West India : Mumbai --> No AZ
+South India : Chennai --> No AZ
+ 
+ Azure Resource Manager(ARM)
+ --> it is a management and deployment service of Microsoft Azure.
+ --> it acts like a manager between you and azure resources.
+
+ *Key components of ARM:
+ 1. Resource:
+ --> A Resource is any service you create in Azure.
+ 2. Resource Group:
+ --> A resource group is a logical container that holds related resources.
+ eg: Dev
+     ---> servers
+     ---> databases
+     ---> networks
+ 3. ARM Template: (IaC)
+ --> It is a JSON file that describes the infrastructure you want.
+ 4. parameters:
+ --> parameters alloe you to make template resuable
+ 5. variable:
+ ----> it store vlaues used multiple times in a template
+ 6. outputs:
+ ---> outputs display information after deployment
+ 7. Resource Provider:
+ --> a Resource provider is a service that knows how to create and manage a specific resource.
+ eg:
+ VM ---> Microsoft.compute
+ storage ---> Microsoft.storage 
+ 8. Subscription:
+ --> A subscription is used for billing, resouce limit
+   
+
+                                    user
+                                    |
+                        Azure portal/CLI/Powershell 
+                                    |
+                                    ARM
+             |                 |                |                 |
+    microsoft.compute  microsoft.sql      microsoft.storage   microsoft.network
+             |                 |                 |                 |
+            VM               database           Storage         Network                             

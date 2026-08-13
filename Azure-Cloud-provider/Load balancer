@@ -1,0 +1,19 @@
+                                         Load Balancer
+
+--> It is to distribute incoming network traffic across multiple backend resources,
+ such as Azure Virtual Machines or Virtual Machine Scale Sets.
+
+Important components
+1. Frontend IP
+--> This is the IP address through which users access the Load Balancer.
+2. Backend Pool
+--> The backend pool contains the resources that receive traffic.
+3. Health Probe
+--> The Load Balancer checks whether the backend servers are healthy.
+4. Load-balancing Rule
+--> The rule tells Azure how to forward traffic.
+
+**Azure LB VS AWS ELB** :
+1. Azure Load Balancer works at Layer 4, whereas AWS ELB can provide different types of load balancing, including Layer 4 through NLB and Layer 7 through ALB.
+2. Azure Load Balancer supports TCP and UDP traffic, whereas AWS NLB supports TCP/UDP/TLS and AWS ALB handles HTTP/HTTPS at Layer 7.
+3. Azure Load Balancer uses frontend IP configurations, backend pools, health probes, and load-balancing rules, whereas AWS ELB uses concepts such as listeners, target groups, and health checks.

@@ -1,0 +1,14 @@
+                              Azure SQL database
+                                     -------------> RDS in AWS
+
+AWS RDS = Supports many engin options(mariadb, sql, db2 etc)
+Azure = focused on SQL derver only (Microsoft's product)
+
+database server:
+--> it is simply a logical server. it is like a container that manages one or more databases.
+--> it contains:
+1. login credentials
+2. firewall rules
+3. regions
+4. databases
+

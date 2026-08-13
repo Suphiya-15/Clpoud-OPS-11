@@ -1,0 +1,15 @@
+
+basic script:
+
+#!/bin/bash
+
+name="Seema"
+age=25
+
+echo "Hello Everyone.. my name is $name and age is $age"
+
+**user input:
+
+
+
+

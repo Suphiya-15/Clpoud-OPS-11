@@ -1,0 +1,18 @@
+
+#!/bin/bash
+set -e
+service_name="httpd"
+
+if systemctl is-active --quiet $service_name
+then 
+      echo "$service_name is running"
+    else
+      echo "$service_name is NOT running. Attempting to restart.."
+      sudo systemctl restart $service_name
+      if systemctl is-active --quiet $service_name
+      then
+         echo "$service_name restarted successfully"
+         else
+         echo "Filed to restart $service_name. manual intervention is needed"
+      fi
+fi

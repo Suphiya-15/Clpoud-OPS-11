@@ -1,0 +1,72 @@
+                                   Virtual Machine
+                                          -----------> EC2 in AWS
+
+steps to create instance in AWS                      Azure
+1. tags       ----->                                  name
+2. AMI        ----->                                  image
+3. Instance type         ----------->                 size
+4. Key pair             ------------->              keys + password
+5. security               ----------->              inbound rule
+6. storage             ---------->                 OS Disk 
+
+*Types of VM:
+1. VM:
+--> A Virtual Machine (VM) is a virtual computer created inside a physical computer.
+It has its own operating system, CPU, memory, and storage
+
+2. VMSS:
+--> VMSS is an Azure service used to create and manage a group of identical Virtual Machines.
+The number of VMs can automatically increase or decrease according to the workload.
+
+3. Hybrid, preconfigured and high volume solution
+--> is a ready-to-use solution in which the operating system, 
+software, and required settings are already configured.
+
+**Availability Options:
+--> Availability options in Azure define how Azure protects your Virtual Machine from
+hardware failure and data-center problems.
+
+1. No Infrastructure Redundancy
+--> In this option, your VM runs on one physical server inside an Azure data center.
+If the physical host has a hardware problem, your VM may be affected.
+2. Availability Zone
+--> An Availability Zone is a separate physical location within an Azure region.
+If one zone has a problem, your application can continue running in another zone.
+
+**Azure VM Purchasing Options:
+1. pay as you go : on-demand
+2. Reservations
+3. Saving plan
+4. Spot instance
+
+**OS Disk**
+--> 
+An OS Disk in Azure is the disk that contains the operating system of a Virtual Machine (VM).
+ For example, if you create a Windows or Linux VM, the OS files are stored on the OS disk.
+Standard HDD
+
+1. Standard HDD: (Hard Disk Drive)
+--> It is the most economical disk option.
+-->It uses traditional magnetic disk technology and provides lower performance 
+and higher latency compared to SSD disks.
+--> Use Standard HDD when:
+1. Cost is the main priority.
+2. The workload is not performance-sensitive.
+3. You are creating a test or development VM.
+4. The VM does not require frequent disk read/write operations.
+
+2. Standard SSD: (Solid State Drive)
+--> It provides better performance than Standard HDD while remaining cost-effective.
+--> It has lower latency and faster read/write operations than HDD.
+--> use Standard SSD when:
+1. You need better performance than HDD.
+2. You want a balance between cost and performance.
+3. You are creating development, testing, or light production workloads.
+
+3. Premium SSD
+--> Premium SSD provides high performance, high IOPS, and low latency.
+--> It is designed for applications that require fast disk operations and consistent performance.
+--> Use Premium SSD when:
+1. The application requires high performance.
+2. There are frequent read/write operations.
+3. You are running production workloads.

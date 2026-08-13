@@ -1,0 +1,22 @@
+                        Azure Function / Function APP
+                                    ----------> Lambda in AWS
+
+--> An Azure Function is a serverless compute service provided by Microsoft Azure that lets you run small pieces of code without managing servers or infrastructure. Azure automatically allocates resources, scales your application, and charges you only for the execution time (on the Consumption plan).
+
+**Key Features**:
+Serverless: No need to create or maintain virtual machines.
+Event-driven: Functions execute in response to events or triggers.
+Automatic scaling: Azure increases or decreases the number of instances based on demand.
+Pay-as-you-go: You pay only for the compute time your function uses (depending on the hosting plan).
+Multiple languages: Supports C#, Java, JavaScript, TypeScript, Python, PowerShell, and more.
+
+**Common Triggers**:
+1. HTTP Trigger – Runs when an HTTP request is received.
+2. Timer Trigger – Runs on a schedule (like a cron job).
+3. Blob Storage Trigger – Runs when a file is uploaded to Azure Storage.
+4. Queue Storage Trigger – Runs when a message arrives in a queue.
+5. Event Hub Trigger – Processes streaming events.
+6. Service Bus Trigger – Processes enterprise messaging.
+
+**Differnce between Azure function and AWS Lambda**:
+1. Azure Functions uses triggers such as HTTP, Timer, Blob Storage, Queue, and Event Hub to execute code, whereas AWS Lambda uses events from services such as S3, API Gateway, SQS, SNS, and EventBridge.
