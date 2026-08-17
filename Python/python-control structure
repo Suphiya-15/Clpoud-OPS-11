@@ -1,0 +1,77 @@
+Control structure:
+1. Conditional statement: (if-else)
+2. Loops (for, while)
+
+1. Conditional Statemenmt:
+syntax:
+if condition :
+        #code to execute if the condition is true
+else :
+        #code to execute if the condition is false
+
+Program 1:
+age = int(input("Enter your age:"))
+
+if age >= 18:
+    print("You can vote")
+else:
+    print("sorryy.. you can not vote")
+
+Devops Program 2:
+cpu = 75
+
+if cpu > 80 :
+    print("High CPU Usage")
+else :
+    print("CPU usage is normal")
+
+2. LOOPS:
+-- For Loops
+-- While Loops
+
+1. For loop:
+syntax:
+
+for items in sequence :
+         #code to execute for each items
+
+eg:
+ 
+ fruits = ["apple", "cherry","banana"]
+
+ for fruit in fruits:
+ print(fruit)
+
+program 2:
+for i in range (1,5):
+   print(i)
+
+program 3: (multiplication table)
+number = int(input("Enter  a number:"))
+
+for i in range (1,11):
+     print(f"{number} * {i} = {number * i}")
+
+program 4: process multiple file
+files = ["app.log","error.log","access.log"]
+
+for j in files:
+     print("Processing",j)
+
+program 5: (password checker)
+correct_password = "python123"
+password= " "
+
+while password != correct_password:
+    password= input("Enter the Password:")
+
+print("Access granted")
+
+HW:
+1. Write a program that prints the fibonacci sequence up to a gven number
+2. write a program to find prime number
+3. create a program  that calculates the factorial of a number.
+
+
+
+

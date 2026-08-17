@@ -1,0 +1,35 @@
+basic program:
+Program 1:
+print ("Welcome to python")
+
+print() is a function that displays text on the screen.
+
+Program 2:
+name = "seema"
+print ("Name is "+ name)
+
+Program 3:
+server_name = "web-server"
+ip_address = "192.178.10.2"
+status = "Running"
+
+print("Server Name:",server_name)
+print("IP Address:", ip_address)
+print("Server status:", status)
+
+Program 4: (user Input)
+
+name = input("Enter your name:")
+print("Name is:", name)
+
+
+Program 5: (basic operation)
+num1 = int(input("Enter first number:"))
+num2 = int(input("Enter second number:"))
+sum = num1 + num2
+print("Addition is: ", sum)
+
+int() is used to covert string to integer
+str() is used to convert integer to string
+
+
