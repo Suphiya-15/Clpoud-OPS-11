@@ -3,4 +3,68 @@
 --> Data structure is a way to store and organize data so that it can be accessed and worked with efficiently.
 eg: List, Tuple, sets, Dictionaries
 
-1. List
+
+
+1. List:
+--> List is a collection of items that are ordered and changeable(mutable)
+--> Key charactristics of List:
+1. **ordered**: the items in a list have a defined order and order will not change unless you explicitly modify it
+2. **Mutable**: you can change, add or remove items after the list has been created
+3. **Allow Duplicates**: lists can contain multiple items with the same value.
+eg:
+my_list = [1,2,3,"seema","amit",3]
+
+devops engg:
+1. list of servers
+2. list of users
+3. list of files
+
+
+
+2. Tuple:
+-->A tuple is similar to list with only one key difference, tuples are immutable, means once
+a tuple is created, you cannot chnage , add or remove items from it.
+--> key charactristics:
+1. orderd
+2. immutable
+3. allow duplicates
+eg:
+my_tuple = (1,2,3,"seema","amit",3)
+
+devops engg:
+1. fixed server configuration
+2. fixed port numbers
+
+
+
+3. Dictionaries:
+--> A dictionary is a colection of key-value pairs.
+--> each key is unique
+--> key charactristics:
+1. mutable
+2. unique keys
+3. ordered
+eg:
+my_dictionary = {"name": "seema", "age":25 , "city":"Mumbai"}
+
+
+
+4. sets:
+--> A sets is a collection of unique items. sets are unordered.
+--> key charactristics:
+1. unorder
+2. mutable
+3. no duplication
+eg:
+sets = {1,2,3,"seema","amit",3} 
+
+devops engg:
+1. list server ips
+2. list unique log values
+3. compare servers
+
+
+
+
+
+
