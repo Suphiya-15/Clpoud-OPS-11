@@ -1,0 +1,72 @@
+function:
+
+--> A function is a block of code that performs a specific task.
+--> you define a function once and then you can call it whenever you need it.
+
+1. defining a function:
+--> in python, we define a function using def keyword
+syntax: 
+            def function_name() :
+                 #code block that performs a task
+
+2. calling a function:
+function_name()
+
+program 1:
+def greet():
+     print("Namste! Welcome to the python session..!")
+
+greet()
+
+program 2: (argument passing)
+def add_numbers(a,b):
+    print(f"The sum of {a} and {b} is {a+b}")
+
+add_numbers(10,30)
+add_numbers(100,0)
+add_numbers(50,50)
+
+program 3: (devops script)
+def check_server(status):
+    if status == "running":
+        print ("Server is UP")
+    else:
+        print("Server is DOWN")
+
+def check_disk(usage) :
+    if usage > 80 :
+        print("Warning: Disk is full")
+    else :
+        print("Disk usage is normal")
+
+check_disk(85)
+check_disk(70)
+check_server("running")
+check_server("Stopped")
+check_server("Terminated")
+
+program 4: (return values)
+
+def square(number):
+   return number * number
+
+result = squre(8)
+print(result)
+
+program 5:
+def square(number):
+   return number * number , number + number
+
+product_result, sum_result = square(8)
+print("Product is",product_result)
+print("Sum is ", sum_result)
+
+program 6: scope of variable
+
+x = 20   ------> global variable
+def my_function()
+    x = 10  ------> Local variable
+    print(x)
+
+my_function()
+print(x)
